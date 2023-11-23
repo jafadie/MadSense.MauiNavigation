@@ -1,4 +1,5 @@
-﻿using Prismanda.Views;
+﻿using Prismanda.ViewModels;
+using Prismanda.Views;
 
 namespace Prismanda
 {
@@ -12,7 +13,7 @@ namespace Prismanda
 
             ServiceProvider = serviceProvider ?? throw new ArgumentNullException(nameof(serviceProvider));
 
-            MainPage = new NavigationPage(ServiceProvider.GetRequiredService<MainPage>());
+            MainPage = new NavigationPage(new MainPage(new MainPageViewModel()));
         }
     }
 }
