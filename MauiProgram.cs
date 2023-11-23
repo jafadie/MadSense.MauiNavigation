@@ -1,5 +1,4 @@
 ﻿using Microsoft.Extensions.Logging;
-using Prismanda.Services;
 using Prismanda.ViewModels;
 using Prismanda.Views;
 
@@ -19,17 +18,11 @@ namespace Prismanda
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
-            builder.Services.AddSingleton(_ => Application.Current!.MainPage!.Navigation);
-
-            builder.Services.AddSingleton<BackgroundService>();
-
             builder.Services.AddTransient<MainPage>();
             builder.Services.AddTransient<Page1>();
 
             builder.Services.AddTransient<MainPageViewModel>();
             builder.Services.AddTransient<Page1ViewModel>();
-
-
 #if DEBUG
             builder.Logging.AddDebug();
 #endif

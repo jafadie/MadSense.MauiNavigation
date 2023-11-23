@@ -1,5 +1,4 @@
-﻿using Prismanda.Services;
-using Prismanda.Views;
+﻿using Prismanda.Views;
 
 namespace Prismanda
 {
@@ -14,13 +13,6 @@ namespace Prismanda
             ServiceProvider = serviceProvider ?? throw new ArgumentNullException(nameof(serviceProvider));
 
             MainPage = new NavigationPage(ServiceProvider.GetRequiredService<MainPage>());
-        }
-
-        protected override void OnStart()
-        {
-            base.OnStart();
-
-            ServiceProvider.GetRequiredService<BackgroundService>();
         }
     }
 }

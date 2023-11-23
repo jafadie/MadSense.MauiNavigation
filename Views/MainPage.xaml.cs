@@ -1,10 +1,13 @@
-﻿namespace Prismanda.Views
+﻿using Prismanda.ViewModels;
+
+namespace Prismanda.Views
 {
-    public partial class MainPage : ContentPage
+    public partial class MainPage
     {
-        public MainPage()
+        public MainPage(MainPageViewModel viewModel)
         {
             InitializeComponent();
+            BindingContext = viewModel;
         }
     }
 }
