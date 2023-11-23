@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/Prismanda
+/.vs/Prismanda/FileContentIndex
+/.vs/Prismanda/FileContentIndex/67c83c48-64ab-4348-849c-1418f43f835c.vsidx
+/.vs/Prismanda/v17
+/.vs/Prismanda/v17/.suo
+/bin/Debug/net8.0-windows10.0.19041.0/win10-x64
+/obj
